@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Gijón Fernández Web</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobremi">Sobre mí</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección Inicio -->
+    <section id="inicio">
+        <h1>DIEGO GIJÓN</h1>
+        <p>#opentowork</p>
+    </section>
+
+ <!-- Sección Sobre mí -->
+    <section id="sobremi">
+        <h2>Sobre mí</h2>
+        <div class="grid">
+            <img src="images/profile.jpg" alt="Foto de perfil de Diego" class="perfil">
+            <div>
+                <p>Soy un ingeniero bioinformático recientemente graduado, con sólida formación y experiencia en análisis de datos, bases de datos, programación y desarrollo web. Originario de Granada, he cursado la carrera de Ingeniería de la Salud en la Universidad de Málaga (UMA) y en la Liverpool John Moores University.</p>
+                <br>
+                <ul class="no-bullets">
+                    <li><i class="fas fa-check"></i> Dominio del Inglés </li>
+                    <li><i class="fas fa-check"></i> Destreza en Bases de datos </li>
+                    <li><i class="fas fa-check"></i> Experiencia en análisis de datos en R</li>
+                    <li><i class="fas fa-check"></i> Habilidades en programación orientada a objetos con Python y Java</li>
+                    <li><i class="fas fa-check"></i> Conocimientos en Machine Learning</li>
+                    <li><i class="fas fa-check"></i> Aptitudes en diseño web con HTML y CSS</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sección Servicios -->
+    <section id="servicios">
+        <h2>Servicios</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Análisis de datos</h3>
+                <p>Procesamiento y análisis de datos.</p>
+            </div>
+            <div class="card">
+                <h3>Programación</h3>
+                <p>Creación de software personalizado.</p>
+            </div>
+            <div class="card">
+                <h3>Visualización de datos y  diseño web </h3>
+                <p>Generación de gráficos y visualizaciones interactivas.</p>
+            </div>
+        </div>
+    </section>
+
+   <!-- Botón y Sección Mis Hobbies -->
+    <section id="Mis Hobbies">
+        <button id="toggleButton">Más sobre mí</button>
+        <div id="hobbiesContent" class="hidden">
+            <h2>Más sobre mí</h2>
+            <div class="grid">
+                <div class="text">
+                    <p>
+                        Además de mi formación como ingeniero bioinformático, cultivo mi lado artístico a través de la producción musical y la creatividad.<br>
+                        Para terminar, me encanta hacer deporte y llevar a cabo una vida sana y productiva.
+                    </p>
+                </div>
+                <div class="video">
+                    <iframe 
+                        width="560" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/iGNhOxpUs6c?si=-4pBeIgFosWF44MY" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+
+    document.getElementById("toggleButton").addEventListener("click", function() {
+        const content = document.getElementById("hobbiesContent");
+        if (content.classList.contains("hidden")) {
+            content.classList.remove("hidden");
+            content.classList.add("visible");
+            this.textContent = "Cerrar";
+        } else {
+            content.classList.remove("visible");
+            content.classList.add("hidden");
+            this.textContent = "Más sobre mí";
+        }
+    });
+    </script>
+
+
+    <!-- Sección Contacto -->
+    <!-- Sección Contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <h3>Envíame tus dudas</h3>
+        <form action="https://formspree.io/f/xvggvdoz" method="POST">
+            <div class="itemform">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="name" minlength="2" maxlength="64" size="32" required>
+            </div>
+            <div class="itemform">
+                <label for="email">Correo:</label>
+                <input type="email" id="email" name="email" minlength="10" maxlength="128" size="32" required>
+            </div>
+            <div class="itemform">
+                <label for="mensaje">Mensaje:</label>
+                <input type="mensaje" id="mensaje" name="mensaje" minlength="10" maxlength="428" size="62" required>
+            </div>
+            <input type="submit" name="boton" value="Enviar">
+        </form>
+    </section>
+
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Diego Gijón Fernández. Todos los derechos reservados.</p>
+        <ul id="redessociales">
+            <li><a href="https://linkedin.com/in/diegogijonfernandez" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/DiegoGijonFernandez" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="mailto:gijonfernandezdiego@gmail.com"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+    </footer>
+</body>
+</html>
